@@ -125,6 +125,18 @@ void Timer::update(unsigned long now)
 		}
 	}
 }
+
+void Timer::reset() 
+{
+	for (int8_t i = 0; i < MAX_NUMBER_OF_EVENTS; i++)
+	{
+		if (_events[i].eventType != EVENT_NONE)
+		{
+			_events[i].reset();
+		}
+	}
+}
+
 int8_t Timer::findFreeEventIndex(void)
 {
 	for (int8_t i = 0; i < MAX_NUMBER_OF_EVENTS; i++)

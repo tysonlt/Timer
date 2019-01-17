@@ -58,6 +58,12 @@ public:
   void update(void);
   void update(unsigned long now);
 
+  /**
+   * This method will reset all event timers. Use this to restart any timed events
+   * to start counting from now.
+   */ 
+  void reset();
+
 protected:
   Event _events[MAX_NUMBER_OF_EVENTS];
   int8_t findFreeEventIndex(void);

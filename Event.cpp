@@ -63,3 +63,8 @@ void Event::update(unsigned long now)
 		eventType = EVENT_NONE;
 	}
 }
+
+void Event::reset() 
+{
+	lastEventTime = now;	
+}

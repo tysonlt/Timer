@@ -66,5 +66,6 @@ void Event::update(unsigned long now)
 
 void Event::reset() 
 {
+	unsigned long now = millis();
 	lastEventTime = now;	
 }
